@@ -1,4 +1,3 @@
-<pre>
 <?php
 $planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "", "", NULL];
 unset($planets[8]);
@@ -18,9 +17,11 @@ unset($planets[10]);
 function rnd($number){
     global $planets;
     $output = array_rand($planets,$number);
+    echo "<pre>";
     foreach($output as $key => $value){
         print_r ($key."=>".$planets[$output[$key]]."<br>");
     }
+    
     // for($i=0; $i < $planets.count; i++){
     //     echo $output[$i];
     // }
@@ -28,4 +29,3 @@ function rnd($number){
 
 rnd(4);
 ?>
-</pre>
