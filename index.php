@@ -1,8 +1,15 @@
 <?php
 $planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "", "", NULL];
-unset($planets[8]);
-unset($planets[9]);
-unset($planets[10]);
+$planetsx = []  ;
+for($i = 0 ; $i < count($planets) ; $i++){
+    if( $planets[$i] !==  "" && $planets[$i] !== null){
+        array_push($planetsx,$planets[$i]);
+    }
+}
+
+$planets = $planetsx;
+
+// print_r($planetsx);
 
 // print_r($planets);
 
